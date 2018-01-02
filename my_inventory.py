@@ -49,6 +49,7 @@ class MyInventory(InventoryManager):
 
         # if group variables exists, add them to group  
         if groupvars:
+            my_group = self.inventory.get_group(groupname)
             for key, value in groupvars.iteritems():
                 my_group.set_variable(key, value)
 
